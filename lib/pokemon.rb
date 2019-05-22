@@ -24,6 +24,9 @@ class Pokemon
   end
   
   def alter_hp(num)
-    self.hp = num
+    self.id
+    sql = <<-SQL
+      ALTER TABLE
+    SQL
   end
 end
