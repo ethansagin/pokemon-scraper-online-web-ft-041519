@@ -14,6 +14,6 @@ class Pokemon
     poke = db.execute("SELECT * FROM Pokemon WHERE id = ?", id).flatten
     name = poke[1]
     type = poke[2]
-    self.new()
+    self.new(id: id, name: name, type: type, db: db)
   end
 end
