@@ -26,7 +26,7 @@ class Pokemon
   def alter_hp(num)
     self.id
     sql = <<-SQL
-      ALTER TABLE
+      UPDATE pokemon SET hp 
     SQL
   end
 end
