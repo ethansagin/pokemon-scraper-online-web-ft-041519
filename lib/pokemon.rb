@@ -18,7 +18,6 @@ class Pokemon
     name = poke[1]
     type = poke[2]
     new_inst = self.new(id: id, name: name, type: type, db: db)
-    binding.pry
     new_inst
   end
 end
