@@ -12,7 +12,6 @@ class Pokemon
       WHERE name = ?, type = ?
     SQL
     
-    DB[:conn].execute(sql, name, type, db).map do |poke|
-      
+
   
 end
