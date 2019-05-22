@@ -6,6 +6,13 @@ class Pokemon
   end
 
   def self.save(name, type, db)
-    sql = <<-
+    sql = <<-SQL
+      SELECT *
+      FROM Pokemon
+      WHERE name = ?, type = ?
+    SQL
+    
+    DB[:conn].execute(sql, name, type, db).map do |poke|
+      
   
 end
