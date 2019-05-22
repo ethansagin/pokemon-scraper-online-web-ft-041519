@@ -2,7 +2,7 @@ require 'pry'
 class Pokemon
   attr_accessor :name, :type, :db, :id, :hp
 
-  def initialize(id:, name:, type:, db:, :hp = 60)
+  def initialize(id:, name:, type:, db:, :hp = nil)
     @id = id
     @name = name
     @type = type
@@ -18,7 +18,8 @@ class Pokemon
     poke = db.execute("SELECT * FROM Pokemon WHERE id = ?", id).flatten
     name = poke[1]
     type = poke[2]
-    new_inst = self.new(id: id, name: name, type: type, db: db)
+    hp = 60
+    new_inst = self.new(id: id, name: name, type: type, db: db, hp: 60)
     new_inst
   end
 end
