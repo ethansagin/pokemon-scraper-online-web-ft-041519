@@ -14,6 +14,6 @@ class Pokemon
     poke = db.execute("SELECT * FROM Pokemon WHERE id = ?", id).map do |row|
       Pokemon.new(poke)
       binding.pry
-    
+    end
   end
 end
