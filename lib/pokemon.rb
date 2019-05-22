@@ -22,4 +22,8 @@ class Pokemon
     new_inst = self.new(id: id, name: name, type: type, db: db, hp: hp)
     new_inst
   end
+  
+  def alter_hp(num)
+    self.hp = num
+  end
 end
