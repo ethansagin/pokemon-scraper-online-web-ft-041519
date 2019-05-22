@@ -6,12 +6,6 @@ class Pokemon
   end
 
   def self.save(name, type, db)
-    sql = <<-SQL
-      SELECT *
-      FROM Pokemon
-      WHERE name = ?, type = ?
-    SQL
-    
-
+    db.execute("INSERT INTO Pokemon (name, type) ")
   
 end
