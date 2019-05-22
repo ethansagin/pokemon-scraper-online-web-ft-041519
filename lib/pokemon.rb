@@ -1,7 +1,8 @@
+require 'pry'
 class Pokemon
   attr_accessor :name, :type, :db, :id
 
-  def initialize(id:, name:, type:)
+  def initialize(id:, name:, type:, db:)
 
   end
 
@@ -10,8 +11,9 @@ class Pokemon
   end
   
   def self.find(id, db)
-    db.execute("SELECT * FROM Pokemon WHERE id = ?", id).map do |row|
-      Pokemon.new(id: row[0], row[1], row[2])
+    poke = db.execute("SELECT * FROM Pokemon WHERE id = ?", id).map do |row|
+      Pokemon.new(poke)
+      binding.pry
     
   end
 end
