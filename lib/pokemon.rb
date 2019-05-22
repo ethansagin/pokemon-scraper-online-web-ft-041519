@@ -11,9 +11,8 @@ class Pokemon
   end
   
   def self.find(id, db)
-    poke = db.execute("SELECT * FROM Pokemon WHERE id = ?", id).map do |row|
-      Pokemon.new(poke)
-      binding.pry
-    end
+    poke = db.execute("SELECT * FROM Pokemon WHERE id = ?", id)
+    Pokemon.new(poke)
+    binding.pry
   end
 end
